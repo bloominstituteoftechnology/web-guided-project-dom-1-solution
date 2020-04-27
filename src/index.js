@@ -1,11 +1,14 @@
+// See this in the console to make sure the project is wired up correctly
 console.log('The project is UP')
 
+// We will use this to make some headings with JavaScript
 const cardTitles = {
   cardTitle1: 'Cats Are the Supreme Rulers',
   cardTitle2: 'Cats Rule Dogs Drool',
   cardTitle3: 'Give Me All the Belly Rubs',
   cardTitle4: 'I Haz CheeseBurger',
 }
+
 
 // old
 const allLinks = document.getElementsByTagName('a') // no CSS selector
