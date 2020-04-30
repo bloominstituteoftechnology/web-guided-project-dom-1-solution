@@ -6,28 +6,37 @@
 
 - Walk students through [this resource](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
 
-- Demo changing `document.title` to make the point that we can change just about anything on the page (except stylesheets, which have their own DOM)
+- Demo changing `document.title` to make the following points:
+  - `document` is a very big object, deeply nested object, built by Chrome from the HTML
+  - Through it we access just about any aspect of the page
+  - We cannot access stylesheets, which have their own DOM - the CSSOM
+  - The browser uses the DOM and the CSSOM to construct what we see
+  - Some of the things we can **get** from the DOM, we can also **set**
 
 🤔🤔🤔 Exercises:
 
 1. Ask students to console.log `document`
-2. Ask students to console.dir `document`
-3. How do these representations difer?
+1. Ask students to console.dir `document`
+1. How do these representations difer?
+1. Can you find the body of the document?
 
 ### 🚀🚀🚀 We can think of a page as a tree of nested boxes
 
-There are certain relationships between the boxes:
+- There are certain relationships between the boxes:
+  - parent/ancestor
+  - child/descendant
+  - sibling
 
-- parent/ancestor
-- child/descendant
-- sibling
+- Demo the following properties of elements
 
 🤔🤔🤔 Exercises:
 
-1. Select an element on the page and ask students to find:
-   - the parent and a more distant ancestor
-   - a child and a more distant descendant
-   - a sibling
+1. Point out the h1 tag ont the page and have students identify:
+   - Its parent element
+   - Its most distant ancestor element on the page
+   - Its next sibling element
+
+2. Demo `firstElementChild` and `nextElementSibling`
 
 ### 🚀🚀🚀 We can traverse the DOM using dot notation and children
 
@@ -69,6 +78,11 @@ There are certain relationships between the boxes:
   const nav = document.querySelector('nav')
   const linksfromNav = nav.querySelectorAll('a')
 ```
+
+🤔🤔🤔 Exercises:
+
+1. Find all headings in the page and save them into a `headings` variable
+1. Loop over the `NodeList` and console.log the text content of each heading
 
 ## How to Contribute
 
