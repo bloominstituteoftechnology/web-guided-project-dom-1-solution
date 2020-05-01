@@ -7,38 +7,41 @@
 - Walk students through [this resource](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
 
 - `document` is a big, deeply nested object, built by Chrome from the HTML
-- Through it our programs can intereact with the page
+- Through it our JavaScript programs can intereact with the page
 - Some of the things we can **get** from the DOM, we can also **set**
 
 👉 Exercises:
 
-1. Ask students to console.dir `document`
+1. Can you console.dir `document`?
 1. Can you find the title of the document?
 1. Can you set it to be something different?
 
-### 🚀 We can traverse the DOM using special properties of its nodes
+### 🚀 The DOM is made of different kinds of nodes
 
-- There are certain relationships between the nodes:
+- Show on TK the diagram showing the hierarchy of nodes in a page
+- The [types of nodes](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType) we care about the most are element (1) and text (3)
+- When we say element we mean node of type element
+- When we say node we mean any type of node
+
+### 🚀 We can navigate the DOM using special properties of its nodes
+
+- Explain there are certain relationships between the nodes:
   - parent/ancestor
   - child/descendant
 
 - Demo the following properties of nodes:
-  - parentElement / parentNode
-  - firstElementChild / firstChild
-  - nextElementSibling / nextSibling
+  - `parentElement` / `parentNode`
+  - `firstElementChild` / `firstChild`
+  - `nextElementSibling` / `nextSibling`
 
 👉 Exercises:
 
-1. Point out the h1 tag ont the page and have students find:
+1. Point out `document.body` and have students find:
    - Its parent element
-   - Its first child element or node
-   - Its next sibling element
+   - Its first child element
+   - Its first child element's next sibling element
 
-👉 Exercises:
-
-1. Ask students to find a particular element on the page using only dot notation and `children`
-2. Same thing but ask them to use `childNodes` instead
-3. How are `children` and `childNodes` different?
+1. Ask students to find a particular element on the page starting at `document.body`
 
 ### 🚀 There are different types of collections of nodes in the DOM
 
