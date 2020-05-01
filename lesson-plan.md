@@ -2,15 +2,15 @@
 
 ## Lesson Plan
 
-### 🚀🚀🚀 The DOM represents the contents of a browser tab
+### 🚀🚀🚀 The DOM represents the contents of a browser window
 
 - Walk students through [this resource](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
 
 - Demo changing `document.title` to make the following points:
-  - `document` is a very big object, deeply nested object, built by Chrome from the HTML
+  - `document` is a very big, deeply nested object, built by Chrome from the HTML
   - Through it we access just about any aspect of the page
   - We cannot access stylesheets, which have their own DOM - the CSSOM
-  - The browser uses the DOM and the CSSOM to construct what we see
+  - The browser uses the DOM and the CSSOM to render the page
   - Some of the things we can **get** from the DOM, we can also **set**
 
 🤔🤔🤔 Exercises:
@@ -25,15 +25,19 @@
 - There are certain relationships between the boxes:
   - parent/ancestor
   - child/descendant
-  - sibling
+  
+### 🚀🚀🚀 We can traverse the DOM using special properties of nodes
 
-- Demo the following properties of elements
+- Demo the following properties of nodes:
+  - parentElement / parentNode
+  - firstElementChild / firstChild
+  - nextElementSibling / nextSibling
 
 🤔🤔🤔 Exercises:
 
-1. Point out the h1 tag ont the page and have students identify:
+1. Point out the h1 tag ont the page and have students find:
    - Its parent element
-   - Its most distant ancestor element on the page
+   - Its first child element or node
    - Its next sibling element
 
 2. Demo `firstElementChild` and `nextElementSibling`
@@ -48,7 +52,7 @@
 1. Same thing but ask them to use `childNodes` instead
 1. How are `children` and `childNodes` different?
 
-### 🚀🚀🚀 There are different types of nodes in the DOM
+### 🚀🚀🚀 There are different types of collections of nodes in the DOM
 
 - `children` is an array-like `HTMLCollection` showing nodes of type element
 - `childNodes` is an array-like `NodeList` showing all kinds of nodes (elements, text, comments...)
