@@ -1,7 +1,7 @@
-// See this in the console to make sure the project is wired up correctly
+// STEP 1- See this in the console to make sure the project is wired up correctly
 console.log('The project is UP')
 
-// We will use this to make some headings with JavaScript
+// STEP 2- We will use this to make some headings with JavaScript
 const cardTitles = {
   cardTitle1: 'Cats Are the Supreme Rulers',
   cardTitle2: 'Cats Rule Dogs Drool',
@@ -9,6 +9,9 @@ const cardTitles = {
   cardTitle4: 'I Haz CheeseBurger',
 }
 
+// STEP 3- console.dir document and study it
+
+// STEP 4- go to google.com, inspect the 'gmail' link at the top
 
 // old
 const allLinks = document.getElementsByTagName('a') // no CSS selector
