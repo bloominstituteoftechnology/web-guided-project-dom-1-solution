@@ -1,6 +1,6 @@
 # DOM 1
 
-## Lesson Plan
+## A- Lesson Plan
 
 ### 🚀 The DOM represents the structure and contents of a browser window
 
@@ -28,6 +28,7 @@
 - Explain there are certain relationships between the nodes:
   - parent/ancestor
   - child/descendant
+  - sibling
 
 - Demo the following properties of nodes:
   - `parentElement` / `parentNode`
@@ -81,8 +82,6 @@
 
 ### 🚀 Using classList to add, remove and toggle classNames on elements
 
-### 🚀 Using dataSet to read information saved in custom data- attributes
-
 ### 🚀 Getting and setting atributes using dot notation
 
 ### 🚀 Getting and setting attributes using getAttribute and setAttribute
@@ -93,7 +92,9 @@
 
 ### 🚀 Appending newly created elements to the DOM using appendChild and insertAdjacentHTML
 
-## How to Contribute
+### 🚀 Using dataSet to read information saved in custom data- attributes (STRETCH)
+
+## B- How to Contribute
 
 - clone the [starter code](https://github.com/LambdaSchool/web-guided-project-dom-1).
 - create a solution branch: `git checkout -b solution`.
