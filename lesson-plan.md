@@ -10,11 +10,23 @@
 - Through it our JavaScript programs can intereact with the page
 - Some of the things we can **get** from the DOM, we can also **set**
 
-👉 Exercises:
+👉 (1) Exercises:
 
 1. Can you console.dir `document`?
 1. Can you find the title of the document?
 1. Can you set it to be something different?
+
+### 🚀 Elements of the page have content and attributes of interest
+
+- Walk students through right-clicking an element and logging it to the console
+- Demo grabbing the id, classList, dataset, getAttribute, and textContent
+- Demo chaning the text content
+
+👉 (2) Exercises:
+
+1. Point an element on the page and have students pull
+   - id, class list, data set, text content and any attribute
+1. Change the text content of the element
 
 ### 🚀 The DOM is made of different kinds of nodes
 
@@ -35,7 +47,7 @@
   - `firstElementChild` / `firstChild`
   - `nextElementSibling` / `nextSibling`
 
-👉 Exercises:
+👉 (3, 4) Exercises:
 
 1. Point out `document.body` and have students find:
    - Its parent element
@@ -51,7 +63,7 @@
 - `childNodes` has a forEach method whereas `children` does not
 - We can always turn these structures into real arrays with `Array.from()`
 
-👉 Exercises:
+👉 (5) Exercises:
 
 1. Convert an `HTMLCollection` or a `NodeList` into an actual array
 
@@ -75,10 +87,15 @@
   const linksfromNav = nav.querySelectorAll('a')
 ```
 
-👉 Exercises:
+👉 (6, 7) Exercises:
 
-1. Find all headings in the page and save them into a `headings` variable
-1. Loop over the `NodeList` and console.log the text content of each heading
+1. find the following elements or groups of elements:
+
+   - all the divs in the page
+   - all elements with a className of 'card'
+   - the element with an id of 'mainNav'
+
+1. do the same, but using CSS selectors
 
 ### 🚀 Using classList to add, remove and toggle classNames on elements
 

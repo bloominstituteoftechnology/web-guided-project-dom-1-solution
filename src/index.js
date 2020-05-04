@@ -1,7 +1,7 @@
-// STEP 1- See this in the console to make sure the project is wired up correctly
+// See this in the console to make sure the project is wired up correctly
 console.log('The project is UP')
 
-// STEP 2- We will use this to make some headings with JavaScript
+// We will use this to make some headings with JavaScript
 const cardTitles = {
   cardTitle1: 'Cats Are the Supreme Rulers',
   cardTitle2: 'Cats Rule Dogs Drool',
@@ -9,9 +9,14 @@ const cardTitles = {
   cardTitle4: 'I Haz CheeseBurger',
 }
 
-// STEP 3- console.dir document and study it
+// STEP 1- console.dir document and study it
 
-// STEP 4- go to google.com, inspect the 'gmail' link at the top
+// STEP 2- Grab the Lambda Cat heading. How do we access the following:
+//  - the id
+//  - the list of class names
+//  - the data inside a data- attribute
+//  - the text content
+//  - any attribute
 
 // old
 const allLinks = document.getElementsByTagName('a') // no CSS selector
