@@ -123,3 +123,23 @@ A this point you should have a `master` branch pointing to the student's reposit
 When making changes to the `solution` branch, commit the changes and type `git push solution solution:master` to push them to this repository.
 
 When making changes to the `master` branch, commit the changes and use `git push origin master` to push them to the student's repository.
+
+The DOM as a tree-like structure
+Types of nodes inside the DOM
+The global object document
+Collections in the DOM: the HTMLCollection
+Collections in the DOM: the NodeList
+Making a real array from a DOM collection
+Selecting multiple elements with getElementsByTagName
+Selecting multiple elements with getElementsByClassName
+Selecting multiple elements with querySelectorAll
+Selecting single elements with getElementById
+Selecting single elements with querySelector
+Manipulating the text content with .textContent
+Manipulating attributes with .setAttribute
+Manipulating inline styles with .style
+Manipulating class names with .classList API
+Adding elements to the DOM with .appendChild and .prepend
+Accessing ancestors with .parentNode
+Accessing descendants with .children
+Creating new elements with document.createElement
