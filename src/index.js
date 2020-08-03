@@ -1,22 +1,25 @@
 // USING THE DOM TO EDIT ELEMENTS ON THE PAGE (AND ADD NEW ONES)
 
 // 1- Finding an element on the page and saving a reference to it
-//  1a- querySelector
-//  1b- querySelectorAll
+//  getElementById, getElementsByTagName, getElementsByClassName
+//  querySelector
+//  querySelectorAll
 const logoTitle = document.querySelector('#logoTitle')
 
 // 2- Changing an element's text content
+//  textContent, innerText
 logoTitle.textContent = 'Lambda Dog'
 
 // 3- Changing any property
-//  3a- with dot notation
-//  3b- setAttribute
+//  with dot notation
+//  setAttribute, getAttribute
 const image = document.querySelector('.card-group .card:nth-of-type(1) img')
 // image.setAttribute('src', 'https://herepup.com/wp-content/uploads/2015/12/Dog-Advice-1-1.jpg')
 image.src = 'https://herepup.com/wp-content/uploads/2015/12/Dog-Advice-1-1.jpg'
 
 // 4- Changing the style
-//  4a- by changing class names on the element
+//  by changing the class names on the element
+//  by manipulating inline styles on the element
 const header = document.querySelector('header')
 header.classList.add('sky')
 header.classList.remove('sky')
@@ -25,7 +28,6 @@ setInterval(() => {
   header.classList.toggle('sky')
 }, 1000)
 
-//  4b- by manipulating inline styles on the element
 header.style.background = 'pink'
 
 // 5- Creating new elements and appending them
