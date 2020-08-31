@@ -32,6 +32,7 @@ link2FirstCard.setAttribute('href', 'https://doggoipsum.com/')
 // 4- Changing the style
 //  by changing the class names on the element
 //  by manipulating inline styles on the element
+header.style.fontSize = '2em'
 header.classList.add('sky')
 header.classList.remove('sky')
 
