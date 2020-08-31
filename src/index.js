@@ -13,8 +13,9 @@ const textFirstCard = firstCard.querySelector('p')
 const link1FirstCard = textFirstCard.nextElementSibling
 const link2FirstCard = link1FirstCard.nextElementSibling
 
-// 2- Changing an element's text content
-//  textContent, innerText
+// 3- Accessing and changing element attributes
+//  with dot notation
+//  setAttribute, getAttribute
 logoTitle.textContent = 'Lambda Dog'
 titleFirstCard.textContent = 'I rulez'
 subtitleFirstCard.textContent = 'obviously'
