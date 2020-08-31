@@ -1,9 +1,8 @@
 // USING THE DOM TO EDIT ELEMENTS ON THE PAGE (AND ADD NEW ONES)
 
 // 1- Finding an element on the page and saving a reference to it
-//  getElementById, getElementsByTagName, getElementsByClassName
-//  querySelector
-//  querySelectorAll
+//  Older: getElementById, getElementsByTagName, getElementsByClassName
+//  Newer: querySelector, querySelectorAll
 const header = document.querySelector('header')
 const logoTitle = document.querySelector('#logoTitle')
 const firstCard = document.querySelector('.card:nth-of-type(1)')
