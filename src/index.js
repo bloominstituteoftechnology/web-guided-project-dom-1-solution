@@ -13,7 +13,7 @@ const textFirstCard = firstCard.querySelector('p')
 const link1FirstCard = textFirstCard.nextElementSibling
 const link2FirstCard = link1FirstCard.nextElementSibling
 
-// 3- Accessing and changing element attributes
+// 2- Accessing and changing element attributes
 //  with dot notation
 //  setAttribute, getAttribute
 logoTitle.textContent = 'Lambda Dog'
