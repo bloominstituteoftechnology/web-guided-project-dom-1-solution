@@ -24,8 +24,8 @@ This is a deceptively simple (or deceptively complicated?) lesson filled with _l
 * Manipulating attributes of an element with .setAttribute
 * Manipulating inline styles with .style
 * Manipulating class names with .classList API
-* Adding elements to the DOM with .appendChild and .prepend
 * Creating new elements with document.createElement
+* Adding elements to the DOM with .appendChild and .prepend
 
 ## 3- DOM Intro (don't spend more than 30 minutes on the 🚀 sections)
 
