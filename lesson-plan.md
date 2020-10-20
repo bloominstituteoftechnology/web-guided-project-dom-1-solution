@@ -6,7 +6,7 @@
 * Test out with the students the git flow for resetting their branch to the instructor's.
 * Ideally students have a working Node and can do `npm i` and `npm start`.
 * If students have a broken Node, they can still spin up the GP using `live-server`.
-* The GP can also be run by simply opening `index.html` with Chrome.
+* The GP can also be run by simply opening `index.html` with Chrome (no auto reload on save though).
 
 ## 2- Instructor's Checklist
 
