@@ -10,7 +10,7 @@
 
 ## 2- Instructor's Checklist
 
-This is a deceptively simple (or deceptively complicated?) lesson filled with _lots_ of new concepts and syntax. It's easy to run out of time. Here's a quick checklist of things that need covering:
+This is a deceptively simple (or deceptively complicated?) lesson filled with _lots_ of new concepts and syntax. It's easy to run out of time. Here's a quick checklist of things that need covering (or at least mentioning):
 
 * The DOM as an API for our programs to manipulate the page
 * The global object document
