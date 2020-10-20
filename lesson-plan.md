@@ -31,7 +31,7 @@ This is a deceptively simple (or deceptively complicated?) lesson filled with _l
 
 ### 🚀 Basic idea
 
-* `document` is a big, deeply nested object, built by Chrome from the HTML.
+* `document` is a big, deeply nested object, built by the browser from the HTML.
 * Through it our JavaScript programs can intereact with the page.
 * Some of the things we can _get_ from the DOM, we can also _set_.
 * We can inspect the properties of `document` with `console.dir`
