@@ -1,145 +1,92 @@
-# DOM 1
+# Lesson Plan
 
-## A- Lesson Plan
+## 1- Preliminaries
 
-### 🚀 The DOM represents the structure and contents of a browser window
+* Walk the class through the clone, install and start process of the GP repo.
+* Test out with the students the git flow for resetting their branch to the instructor's.
 
-- Walk students through [this resource](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction).
+## 2- Instructor's Checklist
 
-- `document` is a big, deeply nested object, built by Chrome from the HTML
-- Through it our JavaScript programs can intereact with the page
-- Some of the things we can **get** from the DOM, we can also **set**
+This is a deceptively simple (or deceptively complicated?) lesson filled with _lots_ of new concepts and syntax. It's easy to run out of time. Here's a quick checklist of things that need covering:
 
-👉 (1) Exercises:
+* The DOM as an API for our programs to manipulate the page
+* The global object document
+* Types of nodes inside the DOM
+* Collections in the DOM: the NodeList and the HTMLCollection
+* Basic DOM traversal: .parentElement, .nextElementSibling, .children
+* Selecting single elements with older .getElementById
+* Selecting single elements with the more modern .querySelector
+* Selecting multiple elements with older .getElementsByClassName and TagName
+* Selecting multiple elements with the more modern .querySelectorAll
+* Making a real array from a DOM collection with Array.from
+* Manipulating the text content of an element with .textContent
+* Manipulating attributes of an element with object dot notation
+* Manipulating attributes of an element with .setAttribute
+* Manipulating inline styles with .style
+* Manipulating class names with .classList API
+* Adding elements to the DOM with .appendChild and .prepend
+* Creating new elements with document.createElement
 
-1. Can you console.dir `document`?
-1. Can you find the title of the document?
-1. Can you set it to be something different?
+## 3- DOM Intro (don't spend more than 30 minutes on the 🚀 sections)
 
-### 🚀 Elements of the page have content and attributes of interest
+### 🚀 Basic idea
 
-- Walk students through right-clicking an element and logging it to the console
-- Demo grabbing the id, classList, dataset, getAttribute, and textContent
-- Demo chaning the text content
-
-👉 (2) Exercises:
-
-1. Point an element on the page and have students pull
-   - id, class list, data set, text content and any attribute
-1. Change the text content of the element
-
+* `document` is a big, deeply nested object, built by Chrome from the HTML.
+* Through it our JavaScript programs can intereact with the page.
+* Some of the things we can _get_ from the DOM, we can also _set_.
+* We can inspect the properties of `document` with `console.dir`
+  
 ### 🚀 The DOM is made of different kinds of nodes
 
-- Show on TK the diagram showing the hierarchy of nodes in a page
-- The [types of nodes](https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType) we care about the most are element (1) and text (3)
-- When we say element we mean node of type element
-- When we say node we mean any type of node
+* Show the diagram in Canvas showing the hierarchy of nodes in a page
+* The types of elements we care about the most are element (1) and text (3)
+* When we say element we normally mean node of type element
+* When we say node we normally mean any type of node
 
 ### 🚀 We can navigate the DOM using special properties of its nodes
 
-- Explain there are certain relationships between the nodes:
-  - parent/ancestor
-  - child/descendant
-  - sibling
+* Explain there are certain relationships between the nodes:
+  * parent/ancestor
+  * child/descendant
+  * sibling
 
-- Demo the following properties of nodes:
-  - `parentElement` / `parentNode`
-  - `firstElementChild` / `firstChild`
-  - `nextElementSibling` / `nextSibling`
-
-👉 (3, 4) Exercises:
-
-1. Point out `document.body` and have students find:
-   - Its parent element
-   - Its first child element
-   - Its first child element's next sibling element
-
-1. Ask students to find a particular element on the page starting at `document.body`
+* Demo the following properties of nodes and allow time for students to experiment:
+  * `parentElement` / `parentNode`
+  * `firstElementChild` / `firstChild`
+  * `nextElementSibling` / `nextSibling`
 
 ### 🚀 There are different types of collections of nodes in the DOM
 
-- `children` is an array-like `HTMLCollection` showing nodes of type element
-- `childNodes` is an array-like `NodeList` showing all kinds of nodes (elements, text, comments...)
-- `childNodes` has a forEach method whereas `children` does not
-- We can always turn these structures into real arrays with `Array.from()`
+* `children` is an array-like `HTMLCollection` showing nodes of type element
+* `childNodes` is an array-like `NodeList` showing all kinds of nodes (elements, text, comments...)
+* `childNodes` has a forEach method whereas `children` does not
+* We can always turn these structures into real arrays with `Array.from()`
 
-👉 (5) Exercises:
-
-1. Convert an `HTMLCollection` or a `NodeList` into an actual array
-
-### 🚀 Selecting elements from the DOM
-
-#### Older techniques without CSS selector
+### 🚀 Selecting elements and collections of elements from the DOM using older techniques
 
 ```javascript
-  const allLinks = document.getElementsByTagName('a')
-  const allCards = document.getElementsByClassName('card')
-  const logoTitleOld = document.getElementById('logo-title')
+  const allLinks = document.getElementsByTagName('a')        // HTMLCollection (can be empty)
+  const allCards = document.getElementsByClassName('card')   // HTMLCollection (can be empty)
+  const logoTitleOld = document.getElementById('logo-title') // single element (or null)
 ```
 
-#### Newer techniques using CSS selector
+## 4- DOM Demo (we should spend the bulk of the class here!)
 
-```javascript
-  const logoTitle = document.querySelector('#logo-title') // single element
-  const anchorTagsNav = document.querySelectorAll('nav a') // NodeList
-  // can be called on elements instead of document
-  const nav = document.querySelector('nav')
-  const linksfromNav = nav.querySelectorAll('a')
-```
+* Starting at `👉 STEP 1` inside `index.js` follow the instructions in the comments.
 
-👉 (6, 7) Exercises:
+## 5- Links of Interest
 
-1. find the following elements or groups of elements:
+* [The DOM chapter in Eloquent JS](https://eloquentjavascript.net/14_dom.html)
+* [DOM Nodes on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Node)
+* [insertAdjacentHTML on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML)
 
-   - all the divs in the page
-   - all elements with a className of 'card'
-   - the element with an id of 'mainNav'
+## 6- Following Along and Catching Up
 
-1. do the same, but using CSS selectors
+* The instructor should make sure students clone the starter repo without forking it.
+* The instructor must make commits to a `lecture` branch and push them regularly (or use a script to do it).
+* If the students work on their own named branch, `main` is kept clean so they can re-do the demo later.
+* In order to catch up, the students can reset their branch to the instructor's last pushed commit:
 
-### 🚀 Using classList to add, remove and toggle classNames on elements
-
-### 🚀 Getting and setting atributes using dot notation
-
-### 🚀 Getting and setting attributes using getAttribute and setAttribute
-
-### 🚀 Getting and setting the text content of elements
-
-### 🚀 Creating new elements
-
-### 🚀 Appending newly created elements to the DOM using appendChild and insertAdjacentHTML
-
-### 🚀 Using dataSet to read information saved in custom data- attributes (STRETCH)
-
-## B- How to Contribute
-
-- clone the [starter code](https://github.com/LambdaSchool/web-guided-project-dom-1).
-- create a solution branch: `git checkout -b solution`.
-- add this repository as a remote: `git remote add solution https://github.com/LambdaSchool/web-guided-project-dom-1-solution`
-- pull from this repository's `master` branch into the `solution` branch in your local folder `git pull solution master:solution --force`.
-
-A this point you should have a `master` branch pointing to the student's repository and a `solution` branch with the latest changes added to the solution repository.
-
-When making changes to the `solution` branch, commit the changes and type `git push solution solution:master` to push them to this repository.
-
-When making changes to the `master` branch, commit the changes and use `git push origin master` to push them to the student's repository.
-
-The DOM as a tree-like structure
-Types of nodes inside the DOM
-The global object document
-Collections in the DOM: the HTMLCollection
-Collections in the DOM: the NodeList
-Making a real array from a DOM collection
-Selecting multiple elements with getElementsByTagName
-Selecting multiple elements with getElementsByClassName
-Selecting multiple elements with querySelectorAll
-Selecting single elements with getElementById
-Selecting single elements with querySelector
-Manipulating the text content with .textContent
-Manipulating attributes with .setAttribute
-Manipulating inline styles with .style
-Manipulating class names with .classList API
-Adding elements to the DOM with .appendChild and .prepend
-Accessing ancestors with .parentNode
-Accessing descendants with .children
-Creating new elements with document.createElement
+  ```bash
+    git fetch && git reset --hard origin/lecture
+  ```
