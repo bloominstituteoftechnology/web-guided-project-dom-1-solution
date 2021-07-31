@@ -89,7 +89,7 @@ const data =   {
   }
 };
 
-const contactHeading = document.querySelector('contact-heading');
+const contactHeading = document.querySelector('.contact-heading');
 const address = document.querySelector('.address');
 const phone = document.querySelector('.phone');
 const email = document.querySelector('.email');
