@@ -25,7 +25,7 @@ const links = document.querySelectorAll('nav a')
 links.forEach(link => console.log(link.textContent))
 // C- turn the collection of links into a real array
 const linksRealArray = Array.from(links)
-// D- use .filter to find the anchor tag with the textContent of "Home"
+// D- use .find to find the anchor tag with the textContent of "Home"
 console.log(linksRealArray.find(link => link.textContent === 'Home'))
 
 
@@ -78,5 +78,28 @@ document.querySelector('.card-group')
 header.remove()
 document.body.prepend(header)
 
+// 👉 9- Go through having an object 'data-store' type of thing and using that to update data, something along the lines of:
 
-// 👉 9- Show to students the insertAdjacentHTML method [STRETCH if time allows]
+const data =   {
+  "contact": {
+    "contact-heading" : "Contact",
+    "address" : "123 Way 456 Street Somewhere, USA",
+    "phone" : "1 (888) 888-8888",
+    "email" : "sales@greatidea.io",
+  }
+};
+
+const contactHeading = document.querySelector('contact-heading');
+const address = document.querySelector('.address');
+const phone = document.querySelector('.phone');
+const email = document.querySelector('.email');
+
+// Teacher:
+contactHeading.textContent = data["contact"]["contact-heading"];
+// Students:
+address.textContent = data["contact"]["address"];
+phone.textContent = data["contact"]["phone"];
+email.textContent = data["contact"]["email"];
+
+
+// 👉 10- Show to students the insertAdjacentHTML method [STRETCH if time allows]
