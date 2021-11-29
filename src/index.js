@@ -4,9 +4,9 @@
 //  Select the following single elements from the div.card
 
 // A- finding across the entire DOM
-const header = document.querySelector('header')                  // instructor
+const header = document.querySelector('header')                  // students
 const logoTitle = document.querySelector('#logoTitle')           // students
-const firstCard = document.querySelector('.card:nth-of-type(1)') // students
+const firstCard = document.querySelector('.card:nth-of-type(1)') // instructor
 // B- finding within one particular element
 const imageFirstCard = firstCard.querySelector('img')   // instructor
 const titleFirstCard = firstCard.querySelector('h2')    // students
